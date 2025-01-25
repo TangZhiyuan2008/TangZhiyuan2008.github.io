@@ -3,115 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub个人主页</title>
+    <title>唐志远的个人主页</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f4f4f9;
             color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            background-image: url('https://h1.rth5.com/20180115092518_vbmcg.jpg'); /* 添加背景图片 */
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-attachment: fixed; /* 背景图片固定，不会滚动 */
+            background-position: center; /* 背景图片居中 */
         }
         header {
-            background: #333;
+            background: linear-gradient(135deg, #ff5722, #e91e63);
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #555 3px solid;
+            padding: 1rem;
+            text-align: left;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
+        header h1 {
             margin: 0;
+            font-size: 1.5rem;
         }
-        header nav {
-            float: right;
-            margin-top: 10px;
+        header p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
         }
-        header .highlight, header .current a {
-            color: #e8491d;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #ffffff;
-            font-weight: bold;
-        }
-        .main {
-            padding: 20px;
+        header .feedback-button {
             background: #fff;
-            margin-top: 20px;
+            color: #ff5722;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
         }
-        .main h2 {
-            margin: 0 0 20px;
+        header .feedback-button:hover {
+            background-color: #ff5722;
+            color: #fff;
         }
-        .main hr {
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        main {
+            padding: 8rem 1rem 8rem; /* 上部留出页首空间，下部留出页尾空间 */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .introduction {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+        .introduction h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+        .introduction p {
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
         .web-links {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column;
+            gap: 1rem;
         }
-        .web-links a {
+        .web-links .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .web-links .card:hover {
+            transform: translateY(-5px);
+        }
+        .web-links .card a {
             display: block;
-            width: 200px;
-            height: 150px;
-            background: #e8491d;
+            padding: 1rem;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .web-links .card a:hover {
+            color: #ff5722;
+        }
+        footer {
+            background: #333;
             color: #fff;
             text-align: center;
-            line-height: 150px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 10px;
-        }
-        .web-links a:hover {
-            background: #555;
+            padding: 0.5rem 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div id="branding">
-                <h1>唐志远的个人主页</h1>
-
+            <h1>唐志远 Tang Zhiyuan</h1>
+            <p>欢迎来到我的个人主页，这里是我的作品和项目的展示平台。</p>
+        </div>
+        <a href="https://example.com/feedback" target="_blank" class="feedback-button">我要反馈</a>
     </header>
-    <div class="container">
-        <div class="main">
-            <h2>个人介绍</h2>
-            <p>你好，我是一名热爱编程的开发者，专注于Web开发和人工智能领域。我热爱挑战，喜欢通过代码解决问题。在这里，你可以找到我的一些项目和作品。</p>
+    <main>
+        <div class="container">
+            <p>本页面GitHub网址：<a href="https://tangzhiyuan2008.github.io" target="_blank">tangzhiyuan2008.github.io</a></p>
+            <p>本页面国内稳定网址：<a href="https://tangzhiyuan2008.rth5.com" target="_blank">tangzhiyuan2008.rth5.com</a></p>
             <hr>
-            <h2>我的网页作品</h2>
+            <div class="introduction">
+                <h2>个人介绍</h2>
+                <p>你好，我是一名学生。可以使用C,C++,Python进行编程。有使用网络进行整合以制作网站（包括前端与后端）的能力。我是MarbyStudio（马变异工作室）创始人。对信息学奥林匹克竞赛NOIP有涉猎。</p>
+                <p>现在，我已经制作了很多网页与应用（实用型工具与多平台游戏）。</p>
+            </div>
             <div class="web-links">
-                <a href="https://example.com/project1" target="_blank">项目1</a>
-                <a href="https://example.com/project2" target="_blank">项目2</a>
-                <a href="https://example.com/project3" target="_blank">项目3</a>
-                <a href="https://example.com/project4" target="_blank">项目4</a>
+                <div class="card">
+                    <a href="https://github.com/TangZhiyuan2008" target="_blank">GitHub综合信息页面 | 需要可访问GitHub的网络环境</a>
+                </div>
+                <div class="card">
+                    <a href="https://mby.rth5.com" target="_blank">马变异在线MarbyOnline网站 | 便民消息型综合服务网站，用于展示信息</a>
+                </div>
+                <div class="card">
+                    <a href="https://mbyswkjgfyxgs-pro.mysxl.cn/" target="_blank">马变异生物科技股份有限公司官网</a>
+                </div>
+                <div class="card">
+                    <a href="https://maozedong.rth5.com/" target="_blank">毛泽东语录网 | 毛泽东思想是永不落的太阳！</a>
+                </div>
+                <div class="card">
+                    <a href="https://marby.rth5.com/" target="_blank">马变异工作室网站</a>
+                </div>
+                <div class="card">
+                    <a href="https://marbygames.mysxl.cn/" target="_blank">马变异游戏工作室网站 Marby Games Studio</a>
+                </div>
+                <div class="card">
+                    <a href="https://hongqi.rth5.com/" target="_blank">中国当代政治运动史数据库 | 由马变异转载的二次网站 需要可访问GitHub的网络环境</a>
+                </div>
+                <div class="card">
+                    <a href="https://afen.rth5.com/" target="_blank">阿粪网 | 这是阿粪与他的朋友们的专属网站</a>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 唐志远</p>
+    </footer>
 </body>
 </html>
